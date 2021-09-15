@@ -1,0 +1,46 @@
+<body><div class="container">
+  <h3 class="mt-5" style="color: white;">Profile</h3>
+  <hr />
+
+  <div class="row">
+    <div class="col-md-4">
+      <img
+        src="../../assets/images/profile.jpg"
+        alt="Profile"
+        width="40%"
+      />
+    
+      <ng-container *ngIf="auth.isAuthenticated()">
+        <button routerLink="/auth/update" class="nav-link" style="color: white; background-color: #0e0e0f;"> Edit Profile </button>
+      </ng-container>
+      
+    </div>
+  
+<div class="col-md-7">
+    <table class="table-bordered" style="color: white;">
+      <thead>
+          <tr>
+              <th colspan="2" class="text-center" style="color: white;">User Profile</th>
+          </tr>
+      </thead>
+      
+      <tbody>
+          <tr>
+              <td><strong>First Name</strong></td>
+              <td>{{ auth.getUserFirstName() }}</td>
+          </tr>
+          <tr>
+              <td><strong>Last Name</strong></td>
+              <td>{{ auth.getUserLastName() }}</td>
+          </tr>
+          <tr>
+              <td><strong>Email</strong></td>
+              <td>{{ auth.getUserEmail() }}</td>
+          </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+</div>
+</body>

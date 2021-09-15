@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Resume Template </title>
+	<link rel="stylesheet" href="View Resume.component.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head>
+<body>
+
+<div class="resume" id="resume">
+   <div class="resume_left">
+     <div class="resume_profile">
+     </div>
+     <div class="resume_content">
+       <div class="resume_item resume_info">
+         <div class="title">
+          <div class="header">
+        <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQXChFuUcdruIXlukkH7t8Jj3CNKgzkZsloA&usqp=CAU">  
+           <p class="roman"style="font-size: 30px; text-align:center; ">{{ resumeData.fullname }}   </p>
+           <p class="regular"style="font-size: 20px; text-align:center; ">{{ resumeData.designation }} </p>
+         </div>
+       </div>
+       </div>
+       <div class="resume_item resume_skills">
+         <div class="title">
+           <p class="bold">Skills</p>
+         </div>
+         <ul>
+          <li *ngFor="let skill of resumeData.skills">{{ skill }}</li>
+      </ul>
+       </div>
+       <div class="resume_item resume_social">
+         <div class="title">
+           <p class="bold">Contact Information</p>
+         </div>
+         <ul>
+          <li>
+            <div class="icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="data">
+              <p class="semi-bold">Mobile</p>
+             {{ resumeData.mobile }}
+            </div>
+          </li>
+          <li>
+            <div class="icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="data">
+              <p class="semi-bold">Email</p>
+             {{ resumeData.email }}
+            </div>
+          </li>
+           <li>
+             <div class="icon">
+               <i class="fab fa-facebook-square"></i>
+             </div>
+             <div class="data">
+               <p class="semi-bold">Facebook</p>
+               <p>{{ resumeData.facebook }}</p>
+             </div>
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fab fa-linkedin"></i>
+             </div>
+             <div class="data">
+               <p class="semi-bold">Linkedin</p>
+               <p>{{ resumeData.linkedin }}</p>
+             </div>
+           </li>
+           <li>
+            <div class="icon">
+              <i class="fas fa-map-signs"></i>
+            </div>
+            <div class="data">
+              <p class="semi-bold">Address</p>
+             {{ resumeData.address }} <br /> 
+            </div>
+          </li>
+         </ul>
+       </div>
+     </div>
+  </div>
+  <div class="resume_right">
+    <div class="resume_item resume_about">
+        <div class="title">
+           <p class="bold">Objective</p>
+         </div>
+        <ul>{{ resumeData.objective }}</ul>
+    </div>
+    <div class="resume_item resume_work">
+        <div class="title">
+           <p class="bold">Work Experience</p>
+         </div>
+         <div class="card-body">
+          <ul>
+              <li *ngFor="let exp of resumeData.experience">
+                  {{ exp }} 
+                  
+              </li>
+          </ul>
+      </div>
+    </div>
+    <div class="resume_item resume_education">
+      <div class="title">
+           <p class="bold"> Academic Qualifications</p>
+         </div>
+         <div class="card-body">
+          <ul>
+              <li *ngFor="let edu of resumeData.education">
+                  {{ edu }} 
+                  
+              </li>
+          </ul>
+      </div>
+    </div>
+    <div class="resume_item resume_certificate">
+      <div class="title">
+           <p class="bold">Certifications</p>
+         </div>
+         <div class="card-body">
+          <ul>
+              <li *ngFor="let cer of resumeData.certification">
+                  {{ cer }} 
+                  
+              </li>
+          </ul>
+      </div>
+    </div>
+    <div class="resume_item resume_project">
+      <div class="title">
+           <p class="bold">Projects</p>
+         </div>
+         <div class="card-body">
+          <ul>
+              <li *ngFor="let pro of resumeData.project">
+                  {{ pro }} 
+              </li>
+          </ul>
+      </div>
+    </div>
+    <li>
+      <div class="icon">
+        <i class="fas fa-map-lang"></i>
+      </div>
+      <div class="title">
+        <p class="bold">Languages</p>
+      </div>
+      <ul>
+       {{ resumeData.languages }} 
+      </ul>
+    </li>
+  </div> 
+</div>
+<div class="container text-center mb-2">
+  <button (click)="download()" class="btn btn-primary btn-lg">Download Resume</button>
+</div>
+ </body>     
+</html>

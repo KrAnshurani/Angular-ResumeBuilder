@@ -1,0 +1,40 @@
+.bold{
+	display: flex;
+	flex-wrap: wrap;
+    background-color: teal;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 5px ;
+    margin: 30px;
+    
+    font-size:20px;
+    
+}
+.resume{
+    background-color:bisque;
+   /* padding: 20px;
+   width: 65%; */
+    margin-left: 20%;
+      margin-right:20%;
+      position: relative;
+      margin:40px;
+      width:100%;
+      max-width:1000px;
+      min-height:1000px;
+      display:grid;
+      grid-template-columns: 1fr 2fr;
+      box-shadow:0 35px 55px rgba(0,0,0,0.1);
+}
+.resume .resume_left{
+    position :relative;
+    background:Teal;
+    padding:11px;
+}
+
+.header{
+    background-color:bisque ;
+    padding: 15px 30px;
+    color:rgb(12, 12, 12);
+    height: 300px;
+}
+
